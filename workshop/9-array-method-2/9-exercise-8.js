@@ -7,7 +7,11 @@
 // Returns true if every element of lst is of length at least 5.
 // Otherwise returns false.
 function allLong(lst) {
-    // lst is an array of strings
+    
+    const hero = lst.filter(function (word){
+            return word.length < 4;        
+    });
+    return hero;
 
 }
 // -------------------------------------------------------------------------

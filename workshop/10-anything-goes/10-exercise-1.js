@@ -10,8 +10,23 @@
 // and returns a number that indicates how many uppercase “B”
 // characters there are in the string.
 
-function countBs(str) {
+function characterCount(word, countBs) {
 
+    var countBs = 0;
+    for (i = 0; i < word.length; i++) {
+        if (word[i] == "B") {
+            count++;
+        }
 }
-// -------------------------------------------------------------------------
+
+return "The letter " + `${countBs}` + " appears " + `${word}` + " times in the word " ;
+}
+
 console.log('Q1: ', countBs('BananaBabyBubbles'));
+
+
+// function countBs(mainStr) {
+//     (mainStr.split("B").length - 1)
+// }
+// // -------------------------------------------------------------------------
+// console.log('Q1: ', countBs('BananaBabyBubbles'));

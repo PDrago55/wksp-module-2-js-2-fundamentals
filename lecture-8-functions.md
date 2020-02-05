@@ -13,12 +13,22 @@
 ```js
 // Formula for area of rectangle
 
+length * width
+
 // Turn that into a more math-like function...
+
+A = l * w
+
+f(l , w) = l* w
 
 // Define JavaScript function
 
-// Call the JavaScript function
+function areaRectangle(length, width){
+    return length * width;
+}
 
+// Call the JavaScript function
+areaRectangle(23, 10);
 
 ```
 
@@ -29,10 +39,16 @@
 ```js
 // Formula for area of circle
 
+Area = pi * radius * radius
+
 // Define JavaScript function
 
-// Call the JavaScript function
+function areaCircle (radius) {
+    return 3.14 * radius * radius;
+}
 
+// Call the JavaScript function
+areaCircle (10) // 314
 ```
 
 ---
@@ -57,13 +73,25 @@
 ```js
 // Q1. Write a function that returns the sum of 3 numbers.
 
+function sum3 (num1, num2, num3){
+    return 1 + 2 + 3;
+}
+console.log(1 + 2 + 3)
 
 // Q2. Write a function that returns the square of a number minus twice the number.
 
+function idk (square) {
+    return 
+}
 
 // Q3. Write a function that returns the a person's full name, given their first and last names.
 
+function personName (first, last) {
+    const fullName = `${first} ${last}`;
+    return fullName; 
+}
 
+console.log(personName("Paolo", "Drago"));
 ```
 
 ---
@@ -73,12 +101,37 @@
 ```js
 // Q4. Write a function that returns the value of the tax for a given amount.
 
+function gov (price, tax) {
+    const payUp = price * tax;
+    return payUp;
+}
+console.log(10 * .10)
+
 
 // Q5. Write a function that returns the value 42.
+function cheese (two, values){
+    const cheat = two * values;
+    return  cheat;
+}
+    console.log(cheese(42, 1));
 
+    or
+
+function theAnswer (){
+    return 42
+}
 
 // Q6. Write a function that returns "Hello!".
+function hi (hello){
+    const greeting = `${hello}`;
+    return greeting;
+}
+console.log (hi("hello"));
+or
 
+function hi (){
+    return "hello"
+}
 
 ```
 

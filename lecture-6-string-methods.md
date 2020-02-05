@@ -16,23 +16,27 @@ For example, all objects have `toString` and `valueOf` methods.
 
 ```js
 let num = 3;
-num.toString();
+num.toString(); // "3"
 
 let bool = true;
-bool.toString();
+bool.toString(); // "true"
 
 let str = 'hello';
-str.toString();
+str.toString(); // "hello"
 
 let arr = [1, 2, 'three'];
-arr.toString();
+arr.toString(); // "1, 2, three" turned the array into a string
 
 let dip = {value: 3};
-dip.toString();
+dip.toString(); // "[object, object]" cannot obtain info from object...
 ```
 
 Let's look at the examples above again using `valueOf`.
 
+let dip = {value: 3};
+valueOf(); // {value: 3}
+let arr = [1, 2, 'three'];
+valueOf(); // [1, 2, 'three']
 ---
 
 - When programming with JavaScript we don't generally care that booleans, numbers and functions are objects. Their methods aren't that useful most of the time.
@@ -47,12 +51,12 @@ _We'll talk more about objects and methods later when we talk about creating our
 
 Strings have a bunch of methods and properties that will be immediately useful. 😉
 
-- `.length`
-- `.replace()`
-- `.slice()`
-- `.concat()`
-- `split()`
-- `indexOf()`
+- `.length` // returns the length, no arguments thus no brackets
+- `.replace()`// change value/ string
+- `.slice()` // cuts string
+- `.concat()` // combines
+- `split()` // splits
+- `indexOf()` // finds the position you're looking for in an array
 
 📝 None of these methods **mutate** the string; strings are **immutable**.
 📝 They return a new version of the string which you can then work with as you like.
@@ -66,8 +70,7 @@ Calling `.length` returns the length of the sequence.
 ```js
 // Example
 const sentiment = 'I love programming';
-sentiment.length;
-
+sentiment.length; // counts the letters and spacing of string//
 ```
 
 ---
@@ -81,7 +84,8 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
-
+// sentiment.replace('programming', 'bacon')
+sentiment = 'I love bacon'
 ```
 
 ---
@@ -90,14 +94,16 @@ const sentiment = 'I love programming';
 
 `.slice()` extracts a part of a string and returns the extracted part in a new string.
 
-- The method takes 2 parameters: the start position, and the end position.
+- The method takes 2 parameters: the start position (count the characters), and the end position (count the characters in the string).
 
 ```js
 // Example
 const sentiment = 'I love programming';
 
 ```
-
+const sentiment = 'I love programming'; 
+sentiment.slice(2, 6);
+'love'
 ---
 
 ### [`.concat()`](https://www.w3schools.com/jsreF/jsref_concat_string.asp)
@@ -110,7 +116,9 @@ let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
 
 ```
-
+const newSentence = partOne.concat(partTwo);
+const newSentence = '${partOne} ${partTwo};
+const newSentence = partOne + partTwo;
 ---
 
 ### [`.split()`](https://www.w3schools.com/jsreF/jsref_split.asp)
@@ -120,9 +128,10 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
-
+truth.split('')
 ```
-
+truth.split('e') // removes "e"
+truth.split(' ') // spaces string words
 ---
 
 ### [`.indexOf()`](https://www.w3schools.com/jsreF/jsref_indexof.asp)
@@ -136,9 +145,13 @@ This method returns -1 if the value to search for never occurs.
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
 
 ```
+let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+
+yodaSpeak.indexOf("anger")
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_
 
+since it doesn't exists according to Javascript, it will return -1 instead of anything else. It is basically saying FALSE. 
 ---
 
 ## More String Methods here...
