@@ -11,6 +11,17 @@
 let armstrongNumbers = [];
 
 // write your loop here...
-
+for (let i =0; i <1000; i++) {
+    let roids = i.toString().split()
+    let sum = 0;
+    roids.forEach(function(roids){
+        sum +=Number(roids) * Number(roids) * Number(roids);
+    });
+    if (sum === i){
+        armstrongNumbers.push(i);
+    }
+}
 
 console.log(armstrongNumbers);
+
+//so lost? Splitting the numbers out of 999..? 
